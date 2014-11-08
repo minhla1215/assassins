@@ -22,7 +22,7 @@ import android.widget.TextView;
 public class MainActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
     //comment by Minh
-    int i = 0;
+    //comment #2
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
