@@ -21,8 +21,9 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
-    //comment by Minh
-    //comment #2
+
+// comment by Minh
+// comment by Stephen S Chen
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
@@ -47,7 +48,7 @@ public class MainActivity extends Activity
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
     }
-
+//
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
