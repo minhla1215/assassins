@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="hacksc.assassins.Database_test"
+            android:label="@string/title_activity_database_test" >
+        </activity>
+        <uses-permission android:name="android.permission.INTERNET" />
     </application>
 
 </manifest>

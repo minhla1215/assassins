@@ -12,18 +12,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.microsoft.windowsazure.mobileservices.*;
 
-import java.net.MalformedURLException;
-
-
-public class MainActivity extends Activity
+public class Database_test extends Activity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-// comment by Minh
-// comment by Stephen S Chen, trying again
-// commented after the gitignore
-// comment by Mustafa
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
@@ -34,12 +26,10 @@ public class MainActivity extends Activity
      */
     private CharSequence mTitle;
 
-    private MobileServiceClient mClient;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_database_test);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -49,31 +39,12 @@ public class MainActivity extends Activity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
-
-        try {
-            mClient = new MobileServiceClient(
-                    "https://campusassassins.azure-mobile.net/",
-                    "khtquYZnwEtjJEGtFgTWafGNuvnyGe13",
-                    this
-            );
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }
-
-        User item = new User();
-        item.id = "Awesome item";
-        item.password = "password test";
-        mClient.getTable(User.class).insert(item, new TableOperationCallback<User>() {
-            public void onCompleted(User entity, Exception exception, ServiceFilterResponse response) {
-                if (exception == null) {
-                    // Insert succeeded
-                } else {
-                    // Insert failed
-                }
-            }
-        });
     }
-//
+
+    public void databaseConnect(View view){
+    }
+
+
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
@@ -117,7 +88,7 @@ public class MainActivity extends Activity
             // Only show items in the action bar relevant to this screen
             // if the drawer is not showing. Otherwise, let the drawer
             // decide what to show in the action bar.
-            getMenuInflater().inflate(R.menu.main, menu);
+            getMenuInflater().inflate(R.menu.database_test, menu);
             restoreActionBar();
             return true;
         }
@@ -167,14 +138,14 @@ public class MainActivity extends Activity
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_database_test, container, false);
             return rootView;
         }
 
         @Override
         public void onAttach(Activity activity) {
             super.onAttach(activity);
-            ((MainActivity) activity).onSectionAttached(
+            ((Database_test) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
         }
     }
