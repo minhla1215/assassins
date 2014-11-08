@@ -30,6 +30,6 @@ Thumbs.db
 #.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
 .gradle
 build/
-
-MyApplication/app/app.iml
-MyApplication/.idea/misc.xml
+.idea/misc.xml
+app/app.iml
+app/build.gradle
