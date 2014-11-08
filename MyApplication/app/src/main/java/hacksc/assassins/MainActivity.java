@@ -25,6 +25,7 @@ public class MainActivity extends Activity
 // comment by Minh
 // comment by Stephen S Chen, trying again
 // commented after the gitignore
+// comment by Mustafa
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
